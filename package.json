@@ -18,6 +18,8 @@
   "homepage": "https://github.com/sam11385/pgp#readme",
   "dependencies": {
     "bluebird": "^3.5.3",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
     "pg-promise": "^8.5.4"
   }
 }
