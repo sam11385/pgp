@@ -21,8 +21,14 @@ const config = {
 const db = pgp(config);
 
 // RUN SOME SQL!
+// Get everything!
 db.query('SELECT * FROM restaurant').then(function(results) {
-  results.forEach(function(r) {
-    console.log(r.id, r.name);
+  results.forEach(function(column) {
+    console.log(column.id, column.name);
   });
+});
+
+// Example of getting a search paramater!
+db.one("SELECT * FROM restaurant WHERE name='Outback'").then(function(column) {
+  console.log(column.id, column.name, column.category);
 });
